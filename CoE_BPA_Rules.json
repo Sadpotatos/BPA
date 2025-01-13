@@ -147,7 +147,7 @@
     "Category": "Formatting",
     "Severity": 2,
     "Scope": "Measure",
-    "Expression": "not FormatString.Contains(\"$\") and not FormatString.Contains(\"%\") and not (FormatString = \"#,0\" or FormatString = \"#,0.0\")",
+    "Expression": "DataType = \"Int64\" and not FormatString.Contains(\"$\") and not FormatString.Contains(\"%\") and not (FormatString = \"#,0\" or FormatString = \"#,0.0\")",
     "FixExpression": "FormatString = \"#,0\"",
     "CompatibilityLevel": 1200
   },
@@ -610,7 +610,7 @@
     "Severity": 2,
     "Scope": "DataColumn, CalculatedColumn, CalculatedTableColumn",
     "Expression": "(DataType = \"Double\" || DataType = \"Decimal\" || DataType = \"int64\" || DataType = \"DateTime\" )\r\n&&\r\nEncodingHint <> \"Value\"",
-    "FixExpression": "IsAvailableInMDX = false",
+    "FixExpression": "EncodingHint = EncodingHintType.Value",
     "CompatibilityLevel": 1200
   }
 ]
