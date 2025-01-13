@@ -137,7 +137,7 @@
     "Category": "Formatting",
     "Severity": 2,
     "Scope": "Measure",
-    "Expression": "(FormatString.Contains(\"%\") and FormatString <> \"#,0.0%;-#,0.0%;#,0.0%\")\r\n|| (FormatString.Contains(\"%\") and FormatString <> \"#,0.00%;-#,0.00%;#,0.00%\")",
+    "Expression": "(FormatString.Contains(\"%\") and FormatString <> \"#,0.0%;-#,0.0%;#,0.0%\")\r\n and (FormatString.Contains(\"%\") and FormatString <> \"#,0.00%;-#,0.00%;#,0.00%\")",
     "FixExpression": "FormatString = \"#,0.0%\\u003B-#,0.0%\\u003B#,0.0%\"",
     "CompatibilityLevel": 1200
   },
